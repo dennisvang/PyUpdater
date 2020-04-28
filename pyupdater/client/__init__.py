@@ -441,6 +441,7 @@ class Client(object):
                         verify=self.verify,
                         headers=self.headers,
                         http_timeout=self.http_timeout,
+                        max_download_retries=self.max_download_retries,
                     )
                 data = fd.download_verify_return()
                 try:
@@ -474,6 +475,7 @@ class Client(object):
                     verify=self.verify,
                     headers=self.headers,
                     http_timeout=self.http_timeout,
+                    max_download_retries=self.max_download_retries,
                 )
             data = fd.download_verify_return()
             try:
